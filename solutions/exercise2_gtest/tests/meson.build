@@ -1,4 +1,5 @@
-stub_src = files('ds1820.cpp', 'lcd.cpp', )
+inc += include_directories('.')
+stub_src = files('ds1820_stub.cpp', 'display_stub.cpp', )
 
 ts = executable(
   'ts', 

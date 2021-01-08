@@ -30,12 +30,11 @@ namespace Sensor
 
   float Ds1820::convert(uint16_t digital)
   {
-    return 25.2F;
+    return 21.0F;
   }
 
   ROM_t Ds1820::read_rom()
   {
-    // ROM_t data = {{0x28, {0x1, 0x2, 0x3, 0x4, 0x5, 0x6}, 0x00}}; //! OCLINT
     ROM_t data = {{0x28, {}, 0x00}}; //! OCLINT
     return data;
   }
