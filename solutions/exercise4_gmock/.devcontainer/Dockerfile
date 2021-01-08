@@ -10,7 +10,7 @@ FROM mcr.microsoft.com/vscode/devcontainers/cpp:0-${VARIANT}
 #     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/*
 
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-    && apt-get -y install --no-install-recommends cppcheck valgrind libgtest-dev google-mock git ninja-build python3-pip \
+    && apt-get -y install --no-install-recommends libgmock-dev google-mock git ninja-build python3-pip \
     && apt-get autoremove -y && apt-get clean -y && rm -rf /var/lib/apt/lists/* \
     && pip3 install meson \
     && pip3 install gcovr

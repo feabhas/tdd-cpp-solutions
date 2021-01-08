@@ -1,19 +1,19 @@
 
 c_buffer_tests = executable('c_buffer_tests', 
-  sources : [ 'test_main.cpp', 'buffer_tests.cpp', src ], 
+  sources : ['buffer_tests.cpp', src ], 
   include_directories : inc, 
   dependencies : [ gtest_dep, thread_dep ],
   cpp_args : '-DACCESS_CLASS_INTERNALS'
   )
 
 t_buffer_tests = executable('t_buffer_tests', 
-  sources : [ 'test_main.cpp', 'template_buffer_tests.cpp' ], 
+  sources : ['template_buffer_tests.cpp' ], 
   include_directories : inc, 
   dependencies : [ gtest_dep, thread_dep ]
   )
 
 all_tests = executable('all_tests', 
-  sources : [ 'test_main.cpp', 'buffer_tests.cpp', 'template_buffer_tests.cpp', src ], 
+  sources : ['buffer_tests.cpp', 'template_buffer_tests.cpp', src ], 
   include_directories : inc, 
   dependencies : [ gtest_dep, thread_dep ]
   )

@@ -1,4 +1,4 @@
-stub_src = files('ds1820.cpp', )
+stub_src = files('ds1820_stub.cpp', )
 
   ts = executable(
     'ts', sources
