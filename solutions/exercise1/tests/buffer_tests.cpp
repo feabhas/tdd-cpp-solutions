@@ -1,6 +1,6 @@
 #include "gtest/gtest.h"
 
-#define ACCESS_CLASS_INTERNALS 1
+// #define ACCESS_CLASS_INTERNALS 1
 #include "testdef.h"
 #include "Buffer.h"
 
@@ -27,8 +27,8 @@ namespace
     // private members of our buffer class (by making
     // them public)
     
-    ASSERT_EQ(0, buffer.read);
-    ASSERT_EQ(0, buffer.write);
+    // ASSERT_EQ(0, buffer.read);
+    // ASSERT_EQ(0, buffer.write);
   }
 
   TEST_F(BufferTest, getFromEmpty)
