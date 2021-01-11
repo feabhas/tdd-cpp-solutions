@@ -35,6 +35,25 @@ jobs:
           meson test -v
 
       # Runs a single command using the runners shell
-      - name: Build and test exercise 1
+      - name: Build and test exercise 2 (gtest)
         run: |
-          pwd
+          cd solutions/exercise2_gtest/
+          meson builddir 
+          cd builddir 
+          meson test -v
+
+      # Runs a single command using the runners shell
+      - name: Build and test exercise 4 (gmock)
+        run: |
+          cd solutions/exercise4_gmock/
+          meson builddir 
+          cd builddir 
+          meson test -v
+
+      # Runs a single command using the runners shell
+      - name: Build and test exercise 5 (gmock)
+        run: |
+          cd solutions/exercise5_gmock/
+          meson builddir 
+          cd builddir 
+          meson test -v
