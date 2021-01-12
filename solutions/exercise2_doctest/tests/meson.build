@@ -8,7 +8,7 @@ src += files(
 
 ts = executable(
     'ts', 
-    sources : [src, 'test_temperature_sensor.cpp','test_main.cpp'], 
+    sources : [src, 'test_temperature_sensor.cpp',], 
     include_directories : inc
     )
 test('temp_sensor', ts)

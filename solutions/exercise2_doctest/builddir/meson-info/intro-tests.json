@@ -1,1 +1,0 @@
-[{"cmd": ["/Users/Niall/Training/Testing/tddcpp11-201/github/tdd-cpp-solutions/solutions/exercise2_doctest/builddir/tests/ts"], "env": {}, "name": "temp_sensor", "workdir": null, "timeout": 30, "suite": ["tdd-cpp"], "is_parallel": true, "priority": 0, "protocol": "exitcode"}]
