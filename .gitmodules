@@ -10,3 +10,9 @@
 [submodule "solutions/solutions/exercise2_doctest_fakeit/tests/doctest"]
 	path = solutions/solutions/exercise2_doctest_fakeit/tests/doctest
 	url = https://github.com/onqtam/doctest.git
+[submodule "solutions/exercise2_doctest_tromeloeil/tests/doctest"]
+	path = solutions/exercise2_doctest_tromeloeil/tests/doctest
+	url = https://github.com/onqtam/doctest.git
+[submodule "solutions/exercise2_doctest_tromeloeil/tests/trompeloeil"]
+	path = solutions/exercise2_doctest_tromeloeil/tests/trompeloeil
+	url = https://github.com/rollbear/trompeloeil.git
