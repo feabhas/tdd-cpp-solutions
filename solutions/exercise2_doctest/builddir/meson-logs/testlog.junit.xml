@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuites tests="1" errors="0" failures="0"><testsuite name="tdd-cpp" tests="1" errors="0" failures="0" skipped="0"><testcase name="temp_sensor" classname="temp_sensor"><system-out>[doctest] doctest version is "2.4.4"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases: 1 | 1 passed | 0 failed | 0 skipped
+[doctest] assertions: 2 | 2 passed | 0 failed |
+[doctest] Status: SUCCESS!</system-out></testcase></testsuite></testsuites>

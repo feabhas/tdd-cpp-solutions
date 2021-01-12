@@ -1,9 +1,10 @@
-ds = executable(
-    'ds1820', 
-    sources : [src, 'test_ds1820.cpp','test_main.cpp'], 
-    include_directories : inc
+inc += include_directories('./doctest/doctest')
+
+src += files(
+    'ds1820_stub.cpp',
+    'display_stub.cpp',
     )
-test('ds1820', ds)
+
 
 ts = executable(
     'ts', 

@@ -1,0 +1,24 @@
+Log of Meson test suite run on 2021-01-12T09:37:36.900567
+
+Inherited environment: rvm_bin_path='/Users/Niall/.rvm/bin' TERM_PROGRAM='vscode' SHELL='/bin/zsh' TERM='xterm-256color' TMPDIR='/var/folders/tf/jrgp3xgn6v513wl8d80q08sh0000gn/T/' TERM_PROGRAM_VERSION='1.52.1' TERM_SESSION_ID='3635B8AD-0080-43B0-9948-6D9900118650' ZSH='/Users/Niall/.oh-my-zsh' USER='Niall' rvm_path='/Users/Niall/.rvm' SSH_AUTH_SOCK='/private/tmp/com.apple.launchd.UehRthhSVC/Listeners' PAGER='less' LSCOLORS='Gxfxcxdxbxegedabagacad' rvm_prefix='/Users/Niall' PATH='/opt/local/bin:/opt/local/sbin:/Users/Niall/.cargo/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/TeX/texbin:/opt/X11/bin:/Library/Apple/usr/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/opt/local/bin:/opt/local/sbin:/Users/Niall/.cargo/bin:/Users/Niall/development/flutter/bin:/Users/Niall/qemu/arm-softmmu:/Users/Niall/.rvm/bin:/Users/Niall/development/flutter/bin:/Users/Niall/qemu/arm-softmmu' PWD='/Users/Niall/Training/Testing/tddcpp11-201/github/tdd-cpp-solutions/solutions/exercise2_doctest/builddir' LANG='en_GB.UTF-8' XPC_FLAGS='0x0' XPC_SERVICE_NAME='0' rvm_version='1.29.3 (latest)' SHLVL='3' HOME='/Users/Niall' LESS='-R' LOGNAME='Niall' __CF_USER_TEXT_ENCODING='0x1F5:0x0:0x2' APPLICATION_INSIGHTS_NO_DIAGNOSTIC_CHANNEL='true' ORIGINAL_XDG_CURRENT_DESKTOP='undefined' COLORTERM='truecolor' VSCODE_GIT_IPC_HANDLE='/var/folders/tf/jrgp3xgn6v513wl8d80q08sh0000gn/T/vscode-git-8e2a7fd40f.sock' GIT_ASKPASS='/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass.sh' VSCODE_GIT_ASKPASS_NODE='/Applications/Visual Studio Code.app/Contents/Frameworks/Code Helper (Renderer).app/Contents/MacOS/Code Helper (Renderer)' VSCODE_GIT_ASKPASS_MAIN='/Applications/Visual Studio Code.app/Contents/Resources/app/extensions/git/dist/askpass-main.js' OLDPWD='/Users/Niall/Training/Testing/tddcpp11-201/github/tdd-cpp-solutions/solutions/exercise2_doctest' _system_type='Darwin' _system_name='OSX' _system_version='10.15' _system_arch='x86_64' rvm_alias_expanded='' rvm_bin_flag='' rvm_docs_type='' rvm_gemstone_package_file='' rvm_gemstone_url='' rvm_niceness='' rvm_nightly_flag='' rvm_only_path_flag='' rvm_pretty_print_flag='' rvm_proxy='' rvm_quiet_flag='' rvm_ruby_bits='' rvm_ruby_file='' rvm_ruby_make='' rvm_ruby_make_install='' rvm_ruby_mode='' rvm_script_name='' rvm_sdk='' rvm_silent_flag='' rvm_use_flag='' rvm_wrapper_name='' rvm_hook='' _='/usr/local/bin/meson' 
+
+1/1 temp_sensor OK             0.23s
+
+--- command ---
+09:37:36 /Users/Niall/Training/Testing/tddcpp11-201/github/tdd-cpp-solutions/solutions/exercise2_doctest/builddir/tests/ts
+--- stdout ---
+[doctest] doctest version is "2.4.4"
+[doctest] run with "--help" for options
+===============================================================================
+[doctest] test cases: 1 | 1 passed | 0 failed | 0 skipped
+[doctest] assertions: 2 | 2 passed | 0 failed |
+[doctest] Status: SUCCESS!
+-------
+
+
+Ok:                 1   
+Expected Fail:      0   
+Fail:               0   
+Unexpected Pass:    0   
+Skipped:            0   
+Timeout:            0   

@@ -1,20 +1,27 @@
 #include "doctest.h"
 
+#include "display_stub.h"
 #include "ds1820.h"
-#include "lcd.h"
-using namespace DS18B20;
-using namespace Display;
+
 
 #include "temperature_sensor.h"
 
-TEST_CASE("testing basic algorithm") {
-    DS18B20::Ds1820 sensor{};
-    Display::Lcd    display{};
+TEST_CASE("testing basic algorithm")
+{
+  Sensor::Ds1820 sensor{};
+  Display::Display_stub display{};
 
-    Temperature_sensor test_obj { display, sensor };
+  Temperature_sensor test_obj{ display, sensor };
 
-    SUBCASE("run main algorithm") {
-        test_obj.run();
+  SUBCASE("initialise")
+  {
+    auto status = test_obj.initialize();
+    CHECK(status == Temperature_sensor::status::ok);
+
+    SUBCASE("run main algorithm")
+    {
+      auto status = test_obj.run();
+      CHECK(status == Temperature_sensor::status::ok);
     }
-
+  }
 }

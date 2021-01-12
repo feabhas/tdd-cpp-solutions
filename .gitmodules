@@ -1,3 +1,6 @@
 [submodule "solutions/doctest"]
 	path = solutions/doctest
 	url = https://github.com/onqtam/doctest.git
+[submodule "solutions/exercise2_doctest/tests/doctest"]
+	path = solutions/exercise2_doctest/tests/doctest
+	url = https://github.com/onqtam/doctest.git
