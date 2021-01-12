@@ -10,3 +10,6 @@
 [submodule "solutions/solutions/exercise2_doctest_fakeit/tests/doctest"]
 	path = solutions/solutions/exercise2_doctest_fakeit/tests/doctest
 	url = https://github.com/onqtam/doctest.git
+[submodule "solutions/exercise4_fakeit/tests/FakeIt"]
+	path = solutions/exercise4_fakeit/tests/FakeIt
+	url = https://github.com/eranpeer/FakeIt.git
