@@ -3,28 +3,35 @@
 
 #include <array>
 #include <optional>
+#include <cstdint>
 
-class Buffer {
+class Buffer
+{
 public:
-  enum class Status { Ok, Full };
+  using buffer_t = std::uint8_t;
+  enum class Status
+  {
+    Ok,
+    Full
+  };
 
-  Buffer()  = default;
+  Buffer() = default;
   ~Buffer() = default;
 
-  Status             add(int value);
-  std::optional<int> get();
-  bool               is_empty();
-  unsigned           size();
-  unsigned           capacity();
-  void               flush();
+  Status add(buffer_t value);
+  std::optional<buffer_t> get();
+  bool is_empty() const;
+  unsigned size() const;
+  unsigned capacity() const;
+  void flush();
 
 private:
-  static constexpr int sz = 8;
-  unsigned             read{};
-  unsigned             write{};
-  unsigned             num_items{};
+  static constexpr unsigned sz = 16;
+  unsigned read{};
+  unsigned write{};
+  unsigned num_items{};
 
-  std::array<int, sz> buffer{};
+  std::array<buffer_t, sz> buffer{};
 };
 
 #endif // BUFFER_H

@@ -1,6 +1,6 @@
 #include "Buffer.h"
 
-Buffer::Status Buffer::add(int value)
+Buffer::Status Buffer::add(Buffer::buffer_t value)
 {
   if (num_items == sz) {
     return Status::Full;
@@ -16,33 +16,33 @@ Buffer::Status Buffer::add(int value)
   }
 }
 
-std::optional<int> Buffer::get()
+std::optional<Buffer::buffer_t> Buffer::get()
 {
   if (num_items == 0) {
     return std::nullopt;
   }
   else {
-    int value = buffer[read];
+    buffer_t value = buffer[read];
 
     --num_items;
     ++read;
     if (read == sz) read = 0;
 
-    return std::make_optional<int>(value);
+    return std::make_optional<buffer_t>(value);
   }
 }
 
-bool Buffer::is_empty()
+bool Buffer::is_empty() const
 {
   return (num_items == 0);
 }
 
-unsigned Buffer::size()
+unsigned Buffer::size() const
 {
   return num_items;
 }
 
-unsigned Buffer::capacity()
+unsigned Buffer::capacity() const
 {
   return sz;
 }

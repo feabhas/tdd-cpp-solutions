@@ -14,11 +14,12 @@ namespace
     BufferTest() = default;
 
     TestBuffer buffer{};
+    static constexpr unsigned buffer_size { 16 };
   };
 
   TEST_F(BufferTest, defaultConfig)
   {
-    ASSERT_EQ(8, buffer.capacity());
+    ASSERT_EQ(buffer_size, buffer.capacity());
     ASSERT_EQ(0, buffer.size());
     ASSERT_TRUE(buffer.is_empty());
 
@@ -85,7 +86,7 @@ namespace
     }
 
     auto error = buffer.add(100);
-    ASSERT_EQ(8, buffer.size());
+    ASSERT_EQ(buffer_size, buffer.size());
     ASSERT_FALSE(buffer.is_empty());
     ASSERT_EQ(TestBuffer::Status::Full, error);
   }
