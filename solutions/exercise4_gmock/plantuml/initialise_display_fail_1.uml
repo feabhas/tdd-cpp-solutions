@@ -1,0 +1,27 @@
+@startuml
+
+title __Scenario : Initialise with first call to display failing__
+
+== Temperature Sensor Constructed==
+System -> Temperature_Sensor : initialise()
+activate Temperature_Sensor
+
+Temperature_Sensor -> sensor : read_rom()
+activate sensor
+sensor --> Temperature_Sensor : DS18B20::ROM_t
+deactivate sensor
+
+Temperature_Sensor -> sensor : calculate_CRC(data, num_of_bytes)
+activate sensor
+sensor --> Temperature_Sensor : CRC value
+deactivate sensor
+
+Temperature_Sensor -> display : display("Family code: 0x28")
+activate display
+display --> Temperature_Sensor : -1
+deactivate display
+
+Temperature_Sensor --> System : status::display_failure
+deactivate Temperature_Sensor
+
+@enduml

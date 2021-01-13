@@ -1,0 +1,41 @@
+@startuml
+|Temperature Sensor|
+start
+
+|sensor|
+:Instruct the DS18B20 to do a conversion;
+:Read the Scratchpad;
+|Temperature Sensor|
+if (read not okay) then
+    #pink:status::sensor_failure;
+    stop
+endif
+|sensor|
+:assert Scratchpad data CRC;
+|Temperature Sensor|
+if (incorrect crc) then
+    #pink:status::sensor_failure;
+    stop
+endif
+|sensor|
+:Convert 16-bit raw temperature 
+to floating point degree C;
+|Temperature Sensor|
+if (Out of range error?) then
+    #pink:status::sensor_failure;
+    stop
+endif
+|sensor|
+:Convert float to C-string format <nn.nnC>;
+|display|
+:display C-string value;
+|Temperature Sensor|
+if (count == -1) then
+    #pink:status::display_failure;
+    stop
+endif
+
+#palegreen:return status::ok;
+stop
+
+@enduml

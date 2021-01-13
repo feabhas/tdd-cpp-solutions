@@ -19,8 +19,7 @@ Temperature_sensor::Temperature_sensor(IDisplay& IDisplay_, Ds1820& sensor_) :
 {
 }
 
-// a.  Initialize the DS18B20 to be configurable for 9, 10, 11 or 12-bit
-// resolution b.  Read ROM c.  assert ROM CRC value d.  On a IDisplay display
+//  b.  Read ROM c.  assert ROM CRC value d.  On a IDisplay display
 // print out ROM's Family Code and Serial number values
 Temperature_sensor::status Temperature_sensor::initialize()
 {

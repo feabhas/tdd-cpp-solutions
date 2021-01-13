@@ -1,0 +1,37 @@
+@startuml
+
+title __Scenario : Run with no errors__
+
+== Temperature Sensor Initialised ==
+System -> Temperature_Sensor : run()
+activate Temperature_Sensor
+
+Temperature_Sensor -> sensor : do_conversion()
+activate sensor
+sensor --> Temperature_Sensor
+deactivate sensor
+
+Temperature_Sensor -> sensor : read_scratchpad(&data)
+activate sensor
+sensor --> Temperature_Sensor : bool
+deactivate sensor
+
+Temperature_Sensor -> sensor : calculate_CRC(data, num of bytes)
+activate sensor
+sensor --> Temperature_Sensor : CRC value
+deactivate sensor
+
+Temperature_Sensor -> sensor : convert(raw sensor temp)
+activate sensor
+sensor --> Temperature_Sensor : temp in C
+deactivate sensor
+
+Temperature_Sensor -> display : display("nn.nnC")
+activate display
+display --> Temperature_Sensor : count
+deactivate display
+
+Temperature_Sensor --> System : status::ok
+deactivate Temperature_Sensor
+
+@enduml
