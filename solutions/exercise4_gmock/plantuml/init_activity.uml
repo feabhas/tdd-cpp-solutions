@@ -6,27 +6,34 @@ start
 :Read DS18B20 Rom;
 :assert Scratchpad data CRC;
 |Temperature Sensor|
-if (incorrect crc) then
+if (crc check) then (incorrect crc)
     #pink:status::sensor_failure;
     stop
 endif
-|sensor|
-:Convert 16-bit raw temperature 
-to floating point degree C;
-|Temperature Sensor|
-if (Out of range error?) then
+
+if (family code check) then (family_code != 0x28)
     #pink:status::sensor_failure;
     stop
 endif
-|sensor|
-:Convert float to C-string format <nn.nnC>;
+
 |display|
-:display C-string value;
+:display family code "0x28";
+
 |Temperature Sensor|
 if (count == -1) then
     #pink:status::display_failure;
     stop
 endif
+
+|display|
+:display serial number "XX:XX:XX:XX";
+
+|Temperature Sensor|
+if (count == -1) then
+    #pink:status::display_failure;
+    stop
+endif
+
 
 #palegreen:return status::ok;
 stop
