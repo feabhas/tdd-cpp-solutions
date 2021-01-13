@@ -1,0 +1,23 @@
+@startuml
+
+title __Scenario : Open to Open with Button Press__
+
+== Door Fully Open ==
+Remote -> GDC : button press
+GDC -> LED : on
+GDC -> Motor : run(acw)
+== Door Lowering ==
+Remote -> GDC : button press
+GDC -> Motor : stop
+GDC -> LED : off
+== Door Stopped while Lowering ==
+Remote -> GDC : button press
+GDC -> LED : on
+GDC -> Motor : run(cw)
+== Door Raising ==
+GDC <- Open_sensor : open
+GDC -> Motor : stop
+GDC -> LED : off
+== Door Full Open ==
+
+@enduml

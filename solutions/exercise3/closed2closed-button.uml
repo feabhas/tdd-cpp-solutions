@@ -1,0 +1,25 @@
+@startuml
+
+title __Scenario : Closed to Closed via Button Press__
+
+== Door Fully Closed ==
+Remote -> GDC : button press
+GDC -> LED : on
+GDC -> Motor : run(cw)
+== Door Raising ==
+Remote -> GDC : button press
+GDC -> Motor : stop
+GDC -> LED : off
+== Door Stopped while Raising ==
+Remote -> GDC : button press
+GDC -> LED : on
+GDC -> Motor : run(acw)
+== Door Lowering ==
+GDC <- Closed_sensor : open
+GDC -> Motor : stop
+GDC -> LED : off
+== Door Full Closed ==
+
+
+
+@enduml

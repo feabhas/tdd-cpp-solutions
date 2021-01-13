@@ -1,0 +1,20 @@
+@startuml
+
+[*] --> Closed
+Closed -right-> Raising : button_press
+Raising --> Open : open
+Open --> Lowering : button_press
+Lowering --> Closed : closed
+
+Raising --> Stopped_Raising : button_press
+Raising --> Stopped_Raising : motor_overcurrent
+
+Lowering --> Stopped_Lowering : button_press
+Lowering --> Stopped_Lowering : motor_overcurrent
+Lowering --> Stopped_Lowering : ir_break
+
+
+Stopped_Raising --> Lowering : button_press
+Stopped_Lowering --> Raising : button_press
+
+@enduml
